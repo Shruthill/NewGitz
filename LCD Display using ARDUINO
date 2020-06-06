@@ -1,13 +1,25 @@
+/* The code prints "Hello World!" to the LCD. LiquidCrystal Library is used. 
+The circuit :
+ LCD RS pin to Digital pin 12
+ LCD Enable pin to Digital pin 11
+ LCD D4 pin to Digital pin 5
+ LCD D5 pin to Digital pin 4
+ LCD D6 pin to Digital pin 3
+ LCD D7 pin to Digital pin 2
+ LCD R/W pin to pin to Ground
+ LCD VSS pin to pin to Ground
+ LCD VCC pin to 5V */
+ 
 #include<LiquidCrystal.h>
 const int rs=12,en=11,d4=5,d5=4,d6=3,d7=2;
 LiquidCrystal lcd(rs,en,d4,d5,d6,d7);
 void setup()
 {
 lcd.begin(16,2);
-lcd.println("Hello World!");
+lcd.print("Hello World!");
 }
 void loop()
 {
 lcd.setCursor(0,1);
-lcd.println(millis()/1000);
+lcd.print(millis()/1000);
 }
