@@ -1,3 +1,10 @@
+/*A car parking system which shows the number of empty slots(if available) and then opens the gate. If there is no empty slot then the gate does not open. 
+PARTS NEEDED :
+     * Arduino board
+     * Infrared Proximmity Sensor
+     * 330r resistor
+     * LED's
+     * Servo motor */  
 #include<Servo.h>
 #include<LiquidCrystal.h>
 LiquidCrystal lcd(12,11,5,4,3,2);
